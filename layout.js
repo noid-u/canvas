@@ -13,6 +13,14 @@
     var connLayer = $('#connLayer');
     var marquee = $('#marquee');
 
+    var palettePane = $('.palette');
+    var toggleBtn = $('#togglePalette');
+    if(toggleBtn){
+      toggleBtn.addEventListener('click', function(){
+        palettePane.classList.toggle('collapsed');
+      });
+    }
+
     /* ===== Undo/Redo History ===== */
     var hist = [];      // Array<stateObj>
     var redoStack = [];
